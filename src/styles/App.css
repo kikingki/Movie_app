@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loading {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: whitesmoke;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading__box {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    /* HEX를 RGBA로 변환 - ctrl+alt+r */
+    border: solid 13px rgba(85,239,196,1.0);
+    border-color: rgba(85,239,196,1.0) rgba(85,239,196,0.5) rgba(85,239,196,0.5);
+
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+
+}
