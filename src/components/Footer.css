@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.footer {
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer__icons .icon1 { display:inline-block; margin-right: 10px;}
+.footer .footer__icons .icon2 { display:inline-block; margin-right: 10px;}
+.footer .footer__icons .icon3 { display:inline-block;}
+
+.footer .footer__copy {
+    font-size: 1.2rem;
+    font-family: "MapoGoldenPier";
+}

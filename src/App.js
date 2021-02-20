@@ -4,6 +4,7 @@ import axios from "axios";
 import "./styles/App.css";
 
 import Nav from "./components/Nav";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import Movie from "./components/Movie";
@@ -25,6 +26,7 @@ class App extends React.Component {
     const {data: {data: {movies}}} = await axios.get(
       'https://yts-proxy.now.sh/list_movies.json?sort_by=rating'
       );
+      console.log({data: {data: {movies}}});
 
       this.setState({isLoaded: true, movies: movies});
   };
@@ -43,12 +45,15 @@ class App extends React.Component {
           <>
             <Nav/>
 
+            <Header/>
+
             {movies.map(movie => (
               <Movie 
                 key = {movie.id}
                 title={movie.title} 
                 poster={movie.medium_cover_image}
                 summary = {movie.summary}
+                year = {movie.year}
               />
             ))}
 

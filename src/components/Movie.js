@@ -1,11 +1,15 @@
 import React from "react";
+import './Movie.css';
 
-const Movie = ({ title, poster,summary }) => {
+const Movie = ({ title, poster,summary, year }) => {
     return (
-        <div>
-            <h3>{title}</h3>
+        <div className="movie">
             <img src={poster} alt={title} />
-            <span>{summary}</span>
+            <div className="movie__info">
+                <h3>{title}</h3>
+                <h5>{year}</h5>
+                <span>{summary.slice(0,200)} ...</span>
+            </div>
         </div>
     );
 };
