@@ -24,7 +24,6 @@
 
 .nav.scroll-opacity{
     opacity: 0.3;
-    transition: 3ms ease-in;
 }
 
 .nav .nav__link a {
