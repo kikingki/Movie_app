@@ -6,8 +6,8 @@ const Movie = ({ title, poster,summary, year }) => {
         <div className="movie">
             <img src={poster} alt={title} />
             <div className="movie__info">
-                <h3>{title}</h3>
-                <h5>{year}</h5>
+                <h2>{title}</h2>
+                <h4>{year}</h4>
                 <span>{summary.slice(0,200)} ...</span>
             </div>
         </div>

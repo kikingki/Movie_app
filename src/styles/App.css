@@ -48,7 +48,10 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
+
     background-color: rgb(253, 252, 240);
     font-family: 'MaruBuri-Regular';
-}
 
+}

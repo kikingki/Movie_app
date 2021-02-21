@@ -26,7 +26,6 @@ class App extends React.Component {
     const {data: {data: {movies}}} = await axios.get(
       'https://yts-proxy.now.sh/list_movies.json?sort_by=rating'
       );
-      console.log({data: {data: {movies}}});
 
       this.setState({isLoaded: true, movies: movies});
   };
@@ -46,16 +45,18 @@ class App extends React.Component {
             <Nav/>
 
             <Header/>
-
-            {movies.map(movie => (
-              <Movie 
-                key = {movie.id}
-                title={movie.title} 
-                poster={movie.medium_cover_image}
-                summary = {movie.summary}
-                year = {movie.year}
-              />
-            ))}
+            
+            <div className="movies">
+              {movies.map(movie => (
+                <Movie 
+                  key = {movie.id}
+                  title={movie.title} 
+                  poster={movie.medium_cover_image}
+                  summary = {movie.summary}
+                  year = {movie.year}
+                />
+              ))}
+            </div>
 
             <Footer/>
           </>

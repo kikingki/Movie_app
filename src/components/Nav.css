@@ -6,7 +6,10 @@
 }
 
 .nav {
-    margin-top: 50px;
+    position: fixed;
+
+    width: 100vw;
+    height: 10vh;
     padding: 10px 30px;
 
     display: flex;
@@ -19,6 +22,11 @@
     border-top: 5px dashed rgb(231, 26, 15);
 }
 
+.nav.scroll-opacity{
+    opacity: 0.3;
+    transition: 3ms ease-in;
+}
+
 .nav .nav__link a {
     all:unset;
     margin-right: 30px;
@@ -28,4 +36,11 @@
     color: black;
     font-family: "paybooc-Bold";
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 800px) {
+    .nav .nav__link a {
+        font-size: 0.9rem;
+        margin-right: 10px;
+    }
 }
